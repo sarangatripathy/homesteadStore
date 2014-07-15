@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= title
+	p Homestead Sporting Goods inventory management - Administration UI
+	
+	if specials.length == 0
+		p No special this week.
+	
+	table
+		each item in inventory
+			tr
+				td
+					| #{item.attributes.name}
+				td
+					img(src="images/#{item.attributes.img}")

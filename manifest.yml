@@ -1,0 +1,10 @@
+---
+applications:
+- name: homestead-server
+  host: homestead-server
+  disk: 1024M
+  command: node app.js
+  path: .
+  domain: ng.bluemix.net
+  mem: 512M
+  instances: 1
