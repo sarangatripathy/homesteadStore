@@ -29,7 +29,7 @@ app.get("/api/special", routes.getSpecial);
 app.post("/api/special", routes.setSpecial);
 app.get("/api/inventory", routes.getInventory);
 app.get("/api/specials", routes.getSpecials);
-app.get("/api/sales", routes.getSales);
+//app.get("/api/sales", routes.getSales);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

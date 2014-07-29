@@ -47,10 +47,12 @@ exports.getSpecials = function(req, res) {
 };
 
 // Update to pass the correct user.
+/*
 var customerName = "Fall Back";
 exports.getSales = function(req, res) {
 	sales.getSales(res, customerName);
 };
+*/
 
 exports.index = function(req, res) {
 	res.render('index', {

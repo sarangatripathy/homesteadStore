@@ -1,31 +1,23 @@
 /*jslint node:true*/
 
-var salesData = require('./salesData.js');
-var request = require('request');
-
-var env = JSON.parse(process.env.VCAP_SERVICES);
-var service = env['user-provided'][0]['credentials'];
 
 exports.getSales = function(resA, customer) {
-	console.log('About to call CICS app');
-	var url = service.url + '/salesreq?ciUser=' + service.username + '&ciPassword=' + service.password;
-	
-	console.log('URL info: ' + url);
-	console.log('About to send to CICS system.');
-	
-	request.get(url, function(error, response, body){
-		if (error || response.statusCode !== 200) {
-			console.error("Error fetching CICS Data. Using fallback data");
-			resA.json(salesData.getSalesData(customer));
-			return;
-		}
-		console.log('Parsing result from CICS system.');
-		var data = JSON.parse(body);
-		// Extract the sales data
-		var responseData = data.INNOV01OperationResponse;
-		console.log('CICS response object');
-		console.log(responseData);
-		var salesgroup = responseData.salesgrp;
-		resA.json(salesgroup.salesreq);
-	});
+	return [
+        {
+        	"objectId" : "2B402DCC-3AF6-4771-9418-MD1011JLMB7H3",
+			"createdAt" : 1393276905592,
+			"modifiedAt" : 1393276905592,
+			"className" : "SpecialItem",
+			"version" : "0",
+			"attributes" : {
+				"description" : "JLM Full Suspension EX",
+				"img" : "MountainBike_1.png",
+				"name" : "JLM Full Suspension EX",
+				"category" : "MountainBike",
+			"inStock" : "Reduced 25%",
+				"sizes" : [],
+				"price" : "$1495.99"
+          	 }
+        }
+     ];
 };
