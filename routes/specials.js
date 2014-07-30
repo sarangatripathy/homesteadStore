@@ -1,8 +1,6 @@
 /*jslint node:true*/
 
 exports.getSpecials = function() {
-	// from
-	// https://mobile.ng.bluemix.net/data/rest/v1/apps/3724cab7-bb45-4701-9e33-49f0849a99a5/objects?classname=InventoryItem
 	return [ {
 		"objectId" : "2B402DCC-3AF6-4771-9418-MD1011AAAB7H3",
 		"createdAt" : 1393276905592,

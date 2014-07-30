@@ -4,6 +4,7 @@
  * GET home page.
  */
 
+
 var inventory = require('./inventory.js');
 var specials = require('./specials.js');
 var sales = require('./sales.js');

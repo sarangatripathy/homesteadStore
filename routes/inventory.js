@@ -8,8 +8,6 @@ var currentSeason = 'spring';
 
 
 var getInventory = function() {
-	// from
-	// https://mobile.ng.bluemix.net/data/rest/v1/apps/3724cab7-bb45-4701-9e33-49f0849a99a5/objects?classname=InventoryItem
 	return [ {
 		"objectId" : "2B402DCC-3AF6-4771-9418-CD011CCAB8FA",
 		"createdAt" : 1393276907417,
@@ -314,7 +312,7 @@ var getSpringInventory = function() {
 				"createdAt" : 1397678596897,
 				"description" : "Hunting Spotlight",
 				"name" : "Hunting Spotlight",
-				"img" : "Hunting Spotlight",
+				"img" : "Hunting Spotlight.png",
 				"inStock" : "In Stock!"
 			},
 			"objectId" : "cff8523a5986dbaf996d3829d3c7e96c94ddb6bb",

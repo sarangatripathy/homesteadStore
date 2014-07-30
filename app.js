@@ -4,6 +4,7 @@
  */
 var express = require('express'),
     routes = require('./routes'),
+    pages = require('./routes/controller'),
     http = require('http'),
     path = require('path');
 var app = express();
@@ -24,7 +25,16 @@ if ('development' === app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// Defines the routes for the app
 app.get('/', routes.index);
+app.get('/bikes', pages.bikes);
+//app.get('/bikes', routes.bikes);
+//app.get('/bikes', function (req, res) {res.render('bikes')});
+app.get('/contact', function (req, res) {res.render('contact')});
+//app.get('/specials', function (req, res) {res.render('test')});
+
+
+
 app.get("/api/special", routes.getSpecial);
 app.post("/api/special", routes.setSpecial);
 app.get("/api/inventory", routes.getInventory);
