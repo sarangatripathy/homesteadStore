@@ -1,5 +1,9 @@
-## Homestead Add - Server side
 
-Sample server implementation for the Homestead mobile app.
+Sample web application using
+- Node.js
+- Express
+- Jade
+- Bootstrap
+
 
 Licensed under the MIT license: http://opensource.org/licenses/MIT

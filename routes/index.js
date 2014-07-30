@@ -9,6 +9,7 @@ var inventory = require('./inventory.js');
 var specials = require('./specials.js');
 var sales = require('./sales.js');
 
+
 var specialName = '';
 
 /*
@@ -47,17 +48,25 @@ exports.getSpecials = function(req, res) {
 	res.json(specials.getSpecials());
 };
 
-// Update to pass the correct user.
-/*
-var customerName = "Fall Back";
-exports.getSales = function(req, res) {
-	sales.getSales(res, customerName);
-};
-*/
 
+
+// The Accessories page
 exports.index = function(req, res) {
 	res.render('index', {
 		inventory : getSeasonalInventory(),
 		specials : specials.getSpecials()
 	});
 };
+
+// Render the Bikes page
+exports.bikes = function(req, res) {
+	res.render('bikes', {
+		bicycles : specials.getSpecials()
+	});
+};
+
+// Render the Contact Us page
+exports.contactUs = function(req, res) {
+	res.render('contact');
+};
+
