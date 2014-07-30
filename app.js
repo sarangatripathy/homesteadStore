@@ -25,7 +25,8 @@ if ('development' === app.get('env')) {
 }
 
 // Defines the routes for the app
-app.get('/', routes.index);
+app.get('/', routes.home);
+app.get('/products', routes.products);
 app.get('/bikes', routes.bikes);
 app.get('/contact', routes.contactUs);
 

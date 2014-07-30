@@ -48,11 +48,14 @@ exports.getSpecials = function(req, res) {
 	res.json(specials.getSpecials());
 };
 
-
+// Render the Home page
+exports.home = function(req, res) {
+	res.render('home');
+};
 
 // The Accessories page
-exports.index = function(req, res) {
-	res.render('index', {
+exports.products = function(req, res) {
+	res.render('products', {
 		inventory : getSeasonalInventory(),
 		specials : specials.getSpecials()
 	});
