@@ -1,8 +1,8 @@
 {
-  "name":"HomesteadServer",
+  "name":"HomesteadDemo",
   "version": "0.0.1",
   "private": true,
-  "description": "Server for the Homestead Sporting Goods app",
+  "description": "Web app for the Homestead Sporting Goods app",
   "scripts": {
     "start": "node app.js"
   },
@@ -17,11 +17,11 @@
     "mocha": "~1.15.1",
     "grunt-mocha-test": "^0.10.2",
     "xunit-file": "0.0.5",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-jshint": "latest",
-    "grunt-contrib-qunit": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-contrib-concat": "latest"
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-qunit": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1"
   },
   "engines": {
 		"node": "0.10.x"
