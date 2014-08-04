@@ -81,7 +81,7 @@ exports.getSpecials = function() {
 	}];
 };
 
-exports.getBikes = function() {
+exports.getSpecialsBikes = function() {
 	return [ {
 		"objectId" : "2B402DCC-3AF6-4771-9418-MD1011AAAB7H3",
 		"createdAt" : 1393276905592,

@@ -64,8 +64,7 @@ exports.products = function(req, res) {
 // Render the Bikes page
 exports.bikes = function(req, res) {
 	res.render('bikes', {
-		//bicycles : specials.getSpecials()
-		bicycles : specials.getBikes()
+		bicycles : specials.getSpecials()
 	});
 };
 
