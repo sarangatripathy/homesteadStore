@@ -65,6 +65,8 @@ exports.products = function(req, res) {
 exports.bikes = function(req, res) {
 	res.render('bikes', {
 		bicycles : specials.getSpecialsBikes()
+		// Replace the line above with this one to introduce a defect
+		// bicycles : specials.getSpecials()
 	});
 };
 
