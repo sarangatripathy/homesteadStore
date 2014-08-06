@@ -3,10 +3,18 @@ extends layout
 block content
 	div.container
 		h1 Homestead Sporting Goods
-		table
-		each item in inventory
-			tr
-				td
-					| #{item.attributes.name}
-				td
-					img(src="images/#{item.attributes.img}")
+		table.table
+			thead
+				tr
+					th 
+					th Name
+					th Price
+			tbody
+				each item in inventory
+					tr
+						td
+							img(src='images/#{item.attributes.img}', width='140', height='192')
+						td
+							| #{item.attributes.name}
+						td
+							| #{item.attributes.price}
