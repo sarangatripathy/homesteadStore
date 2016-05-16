@@ -1,5 +1,6 @@
 /*jslint node:true*/
 
+/*eslint-env node */
 exports.getSpecials = function() {
 	return [ {
 		"objectId" : "2B402DCC-3AF6-4771-9418-MD1011AAAB7H3",

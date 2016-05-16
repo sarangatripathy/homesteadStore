@@ -2,8 +2,9 @@
 Sample web application using
 - Node.js
 - Express
-- Jade
+- EJS
 - Bootstrap
+
 
 
 Licensed under the MIT license: http://opensource.org/licenses/MIT

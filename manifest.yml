@@ -1,7 +1,7 @@
 ---
 applications:
-- name: homestead-Demo
-  host: homestead-Demo
+- name: homestead-store-test
+  host: homestead-store-jltest
   disk: 256M
   command: node app.js
   path: .

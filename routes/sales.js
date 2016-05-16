@@ -1,6 +1,7 @@
 /*jslint node:true*/
 
 
+/*eslint-env node */
 exports.getSales = function(resA, customer) {
 	return [ {
 		"objectId" : "2B402DCC-3AF6-4771-9418-MD1011JLMB7H3",

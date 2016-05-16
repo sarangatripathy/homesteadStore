@@ -1,3 +1,4 @@
+/*eslint-env node, express*/
 /*jshint node:true */
 /**
  * Module dependencies.
@@ -12,6 +13,18 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
+
+//Views & engine
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+app.engine('html', require('ejs').renderFile);
+
+
+// serve the files out of ./public as our main files
+//app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());

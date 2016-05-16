@@ -1,5 +1,5 @@
 {
-  "name":"HomesteadDemo",
+  "name":"HomesteadStore",
   "version": "0.0.1",
   "private": true,
   "description": "Web app for the Homestead Sporting Goods app",
@@ -9,7 +9,8 @@
   "dependencies": {
 	"request": "~2.27.0",
 	"express": "3.2.6 ",
-    "jade": "~1.3.0"
+	"ejs": "2.4.x",
+	 "jade": "~1.3.0"
   },
   "devDependencies": {
     "grunt": "~0.4.x",
@@ -24,6 +25,6 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "engines": {
-		"node": "0.10.x"
+		"node": "4.3.2"
   }
 }

@@ -1,0 +1,43 @@
+<html>
+ <head>
+    <title>Homestead Co.</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="bootstrap/css/candy-box.css"><style>
+    body { padding-top: 60px; }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+     <% include header-bikes.ejs %>
+  <body>
+    <div class="container">
+	  <h1>Sporting Goods</h1>
+	  <table class="table">
+	    <thead>
+	      <tr>
+	        <th> </th>
+	        <th>Name</th>
+	        <th>Price</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	<% for (i = 0; i < bicycles.length; i++) {  %>
+		      <tr>
+		        <td>
+		         <img src="images/<%= bicycles[i].attributes.img %>" width="70" height="96"/>
+		        </td>
+		        <td>
+		          <%= bicycles[i].attributes.name %>
+		        </td>
+		        <td>
+		          <%= bicycles[i].attributes.price %>
+		        </td>
+		      </tr>
+	      	<% } %>
+	    </tbody>
+	  </table>
+	</div>
+  </body>
+  <% include footer.ejs %>
+</html>

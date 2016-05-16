@@ -1,5 +1,6 @@
 /*jslint node:true*/
 
+/*eslint-env node */
 exports.getSalesData = function(customer) {
 	return [
         {
