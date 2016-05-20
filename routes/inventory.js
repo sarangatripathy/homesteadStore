@@ -1,4 +1,4 @@
-/*jslint node:true*/
+/*eslint-env node */
 
 /*
  * Set the current season value. Can be one

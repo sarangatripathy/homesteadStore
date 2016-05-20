@@ -1,4 +1,4 @@
-/*jslint node:true*/
+/*eslint-env node */
 
 /*eslint-env node */
 exports.getSpecials = function() {
