@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Homestead Co.</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="bootstrap/css/candy-box.css">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<% include header-activities.ejs %>
+
+
+        
+        <body>
+    <% var advices = ["Hiking, Biking, Tennis", "Go kart, Soccer, Baseball", "Indoor tennis, Bowling, Hockey"]; %>
+        <div class="container">
+            <h1>Recommended activities based on weather forecasts</h1> (Recommendations for the following location
+            <%= weather.metadata.latitude %> /
+                <%= weather.metadata.longitude%>)
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> </th>
+                                <th>Day</th>
+                                <th>Description</th>
+                                <th>Activities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (i = 1; i < 5; i++) { %>
+                                <tr>
+                                    <td> <img class="weathericon" src="/images/weather/icon<%=weather.forecasts[i].day.icon_code%>.png" width="70" height="96"> </td>
+                                    <td>
+                                        <%= weather.forecasts[i].dow %> <br>(POP
+                                            <%= weather.forecasts[i].day.pop %>%) </td>
+                                    <td>
+                                        <%= weather.forecasts[i].day.narrative %>
+                                    </td>
+                                    <td>
+                                        <% 
+                                        var suggestion;
+										var pop_val = parseInt(weather.forecasts[i].day.pop);
+										switch (true) {
+										    case (pop_val <= 30):
+										        suggestion = advices[0];
+										        break;
+										    case (pop_val > 30 && pop_val < 60):
+										        suggestion = advices[1];
+										        break;
+										    case (pop_val >= 60):
+										        suggestion = advices[2];
+										        break;
+										    default:
+										        suggestion = "No recommendation available at this time";
+										        break;
+										}
+                                        %>
+                                        <%= suggestion %>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+        </div>
+
+        
+        
+    </body>
+    <% include footer.ejs %>
+
+</html>
