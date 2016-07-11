@@ -1,6 +1,7 @@
 ---
 applications:
 - name: homestead-store-example
+  buildpack: sdk-for-nodejs
   host: homestead-store-example
   disk: 256M
   command: node app.js
