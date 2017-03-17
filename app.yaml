@@ -16,7 +16,7 @@ runtime: nodejs
 env: flex
 # [END runtime]
 
-service: test-nodejs 
+service: homestead-demo 
 
 # Temporary setting to keep gcloud from uploading node_modules
 skip_files:
