@@ -1,8 +1,8 @@
 ---
 applications:
-- name: homestead-store-example
+- name: DevOps_gitApp
   buildpack: sdk-for-nodejs
-  host: homestead-store-example
+  host: DevOps_gitApp
   disk: 256M
   command: node app.js
   path: .
